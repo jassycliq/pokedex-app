@@ -47,7 +47,7 @@ jobs:
         uses: actions/upload-pages-artifact@v2
         with:
           # Upload entire repository
-          path: '/home/runner/work/pokedex-app/pokedex-app/app/build/reports/lint-results-debug.html'
+          path: '/home/runner/work/pokedex-app/pokedex-app/app/build/reports/'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
