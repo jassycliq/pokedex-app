@@ -40,14 +40,14 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Create compose metrics
-        run: ./gradlew build -P app.enableComposeCompilerReports=true --rerun-tasks
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          # Upload entire repository
-          path: '/home/runner/work/pokedex-app/pokedex-app/app/build/reports/'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+        run: ./gradlew :app:releaseComposeCompilerHtmlReport --rerun-tasks
+#      - name: Setup Pages
+#        uses: actions/configure-pages@v3
+#      - name: Upload artifact
+#        uses: actions/upload-pages-artifact@v2
+#        with:
+#          # Upload entire repository
+#          path: '/home/runner/work/pokedex-app/pokedex-app/app/build/reports/'
+#      - name: Deploy to GitHub Pages
+#        id: deployment
+#        uses: actions/deploy-pages@v2

@@ -3,6 +3,7 @@ plugins {
     kotlin("android")
     id("com.google.devtools.ksp")
     id("kotlin-parcelize")
+    id("dev.shreyaspatil.compose-compiler-report-generator")
 }
 
 android {
